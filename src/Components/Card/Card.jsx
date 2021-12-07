@@ -1,15 +1,15 @@
 import "./Card.scss"
 
 const Card = (props) => {
-    const {beer} = props;
+    const {beerName, beerImage, beerAbv} = props;
 
   return (
     <div className="card">
       <div className="card-info">
-          <img className="card-info__img" src={beer.image_url} alt="Alcoholic beverage" />
+          <img className="card-info__img" src={beerImage} alt={beerName} />
         <div className="card-info__stats">
-            <p className="card-info__stats-name">{beer.name}</p>
-            <p className="card-info__stats-abv">{beer.abv}</p>
+            <p className="card-info__stats-name">{beerName}</p>
+            <p className="card-info__stats-abv">{beerAbv}</p>
         </div>
       </div>
     </div>

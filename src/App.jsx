@@ -1,7 +1,15 @@
+import React from "react";
 import './App.scss';
+import beers from "./Data/data";
+import CardListJSX from "./Components/CardList/CardList";
 
-function App() {
-  return <p>Hello</p>;
+
+const App = () => {
+
+
+    return <>{CardListJSX()}</>;
 }
+
+console.log(CardListJSX());
 
 export default App;
