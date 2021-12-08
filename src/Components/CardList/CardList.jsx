@@ -1,11 +1,14 @@
-import beers from "../../Data/data";
+import React from "react";
 import Card from "../Card/Card";
 
 
-const CardList = () => {
+const CardList = (props) => {
+    const { beerArr } = props;
 
-    const CardListJSX = beers.map(beer => (
-          <Card beerImage={beer.image_url}  beerName={beer.name}  beerAbv={beer.abv} />
+    // const frontBeerArr= beerArr.map(beer => album.strAlbumThumb);
+
+    const CardListJSX = beerArr.map(beer => (
+          <Card key={beer.id} beerImage={beer.image_url}  beerName={beer.name}  beerAbv={beer.abv} />
       ))
 
       return <>{CardListJSX}</>
