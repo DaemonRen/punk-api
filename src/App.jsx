@@ -4,7 +4,7 @@ import CardList from "./Components/CardList/CardList";
 
 
 const App = () => {
-    const [beerArr, setBeerArr] = useState([])
+    const [beerArr, setBeerArr] = useState([]);
 
     useEffect(() => {
         const URL = `https://api.punkapi.com/v2/beers/`
@@ -12,7 +12,7 @@ const App = () => {
             .then(response => {
             return response.json();
         }).then((beerList) => {
-            setBeerArr(beerList);
+            setBeerArr(beerList.results);
             console.log(beerList);
         });
     }, []);
