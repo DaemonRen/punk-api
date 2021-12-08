@@ -1,13 +1,11 @@
 import React, { useState } from "react";
-import "./Nav.scss";
+import "./Navbar.scss";
+import menu from "../../assets/images/menu-icon.png";
+import NavMenu from "../../Components/NavMenu/NavMenu";
 
 const Nav = props => {
     const { handleSubmit } = props;
     const [showNav, setShowNav] = useState(false);
-  
-    const toggleSettings = () => {
-      setShowSettings(!showSettings);
-    };
   
     const toggleNav = () => {
       setShowNav(!showNav);
@@ -15,11 +13,13 @@ const Nav = props => {
   
     return (
       <nav className="nav">
-        {showSettings && <SettingsMenu userName={userName} toggleSettings={toggleSettings} handleSubmit={handleSubmit}/>}
-        {showNav && <NavMenu toggleNav={toggleNav} />}
+        {showNav && <NavMenu toggleNav={toggleNav} handleSubmit={handleSubmit} />}
   
+        <h2 className="nav__heading">Punk API</h2>
         <img src={menu} className="nav__item nav__item--menu" alt="menu icon" onClick={toggleNav} />
-        <h2 className="nav__heading">Punk Api</h2>
+        
       </nav>
     );
   };
+
+  export default Nav;

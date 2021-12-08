@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import './App.scss';
 import CardList from "./Components/CardList/CardList";
+import Nav from "./Containers/Navbar/Navbar";
 
 
 const App = () => {
@@ -15,7 +16,7 @@ const App = () => {
             setBeerArr(beerList);
             console.log(beerList);
         });
-    }, []);
+    }, [URL]);
 
     // const highAbvBeer = beers
     // .filter(beer => beer.abv > 6)
@@ -30,7 +31,12 @@ const App = () => {
 
 
 
-    return <CardList beerArr={beerArr}/>;
+    return (
+        <div>
+            <Nav />
+            <CardList beerArr={beerArr}/>;
+        </div>
+    )
 }
 
 // console.log(CardListJSX());
