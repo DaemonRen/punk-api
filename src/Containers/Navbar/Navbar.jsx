@@ -15,7 +15,7 @@ const Nav = props => {
       <nav className="nav">
         {showNav && <NavMenu toggleNav={toggleNav} handleSubmit={handleSubmit} />}
   
-        <h2 className="nav__heading">Punk API</h2>
+        <h2 className="nav__heading">Punk API Logo</h2>
         <img src={menu} className="nav__item nav__item--menu" alt="menu icon" onClick={toggleNav} />
         
       </nav>
