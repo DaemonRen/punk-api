@@ -12,7 +12,7 @@ const App = () => {
             .then(response => {
             return response.json();
         }).then((beerList) => {
-            setBeerArr(beerList.results);
+            setBeerArr(beerList);
             console.log(beerList);
         });
     }, []);
