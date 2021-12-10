@@ -1,0 +1,25 @@
+.card {
+    display: grid;
+    grid-column: 1 / -1;
+    justify-content: center;
+    background-color: #ececec;
+    border-radius: 9px;
+    padding-top: 10px;
+    max-width: 50vw;
+    text-align: center;
+
+    &-info {
+        display: grid;
+        grid-column: 1 / -1;
+        justify-content: center;
+
+        &__img {
+        height: auto;
+        width: auto;
+        max-width: 80px;
+        max-height: 200px;
+        object-fit: contain;
+        margin: 0 auto;
+        }
+    }
+}

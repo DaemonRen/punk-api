@@ -5,20 +5,22 @@ import NavMenu from "../../Components/NavMenu/NavMenu";
 
 const Nav = props => {
     const { handleSubmit } = props;
-    const [showNav, setShowNav] = useState(false);
+    const [showNavMenu, setShowNavMenu] = useState(false);
+    const [showNav, setShowNav] = useState(true);
   
-    const toggleNav = () => {
+    const toggleNavMenu = () => {
+      setShowNavMenu(!showNavMenu);
       setShowNav(!showNav);
     };
   
     return (
-      <nav className="nav">
-        {showNav && <NavMenu toggleNav={toggleNav} handleSubmit={handleSubmit} />}
-  
-        <h2 className="nav__heading">Punk API Logo</h2>
-        <img src={menu} className="nav__item nav__item--menu" alt="menu icon" onClick={toggleNav} />
-        
-      </nav>
+      <div>
+        {showNavMenu && <NavMenu toggleNavMenu={toggleNavMenu} handleSubmit={handleSubmit} />}
+        {showNav && <nav className="nav">
+          <h2 className="nav__heading">Punk API Logo</h2>
+          <img src={menu} className="nav__item nav__item--menu" alt="menu icon" onClick={toggleNavMenu} />
+        </nav>}
+      </div>
     );
   };
 

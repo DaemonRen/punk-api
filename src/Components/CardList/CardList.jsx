@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "../Card/Card";
+import "./CardList.scss";
 
 
 const CardList = (props) => {
@@ -11,7 +12,7 @@ const CardList = (props) => {
           <Card key={beer.id} beerImage={beer.image_url}  beerName={beer.name}  beerAbv={beer.abv} />
       ))
 
-      return <>{CardListJSX}</>
+      return <div className="cardlist">{CardListJSX}</div>
 }
 
 export default CardList
